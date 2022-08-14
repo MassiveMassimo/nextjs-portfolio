@@ -15,7 +15,7 @@ export default function Home() {
 
       <main>
         <div style={{ height: '100vh', width: '100%' }}>
-          <iframe src='https://my.spline.design/portfoliohero-42c2c4614b0b42afdeb45b1d42f83c1f/' frameborder='0' width='100%' height='100%'></iframe>
+          <iframe src='https://my.spline.design/portfoliohero-42c2c4614b0b42afdeb45b1d42f83c1f/' width='100%' height='100%'></iframe>
           <div style={{ position: 'absolute', bottom: '2px', right: '2px', width: '100px', height: '100px', backgroundColor: '#FFFFFF' }}></div>
         </div>
         <div>
