@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Loader from '../components/Loader'
 
-
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
@@ -14,9 +14,13 @@ export default function Home() {
       </Head>
 
       <main>
-        <div style={{ height: '100vh', width: '100%' }}>
-          <iframe src='https://my.spline.design/portfoliohero-42c2c4614b0b42afdeb45b1d42f83c1f/' width='100%' height='100%'></iframe>
-          <div style={{ position: 'absolute', bottom: '2px', right: '2px', width: '100px', height: '100px', backgroundColor: '#FFFFFF' }}></div>
+        <div style={{ height: '100vh', width: '100%', textAlign: 'center'}}>
+          <div className={styles.heroHeadings}>
+            <h3 className={styles.subheading}>Meet a next generation</h3>
+            <h1 className={styles.heading}>Product Designer</h1>
+          </div>
+          <iframe src='https://my.spline.design/portfoliohero-42c2c4614b0b42afdeb45b1d42f83c1f/' width='100%' height='100%' frameBorder='0'></iframe>
+          <div style={{ position: 'absolute', bottom: '0px', right: '0px', width: '48px', height: '48px', backgroundColor: '#FFFFFF' }}></div>
         </div>
         <div>
           <Loader show />

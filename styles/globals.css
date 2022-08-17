@@ -17,6 +17,12 @@ a {
   box-sizing: border-box;
 }
 
+.button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
 .fill-height {
   height: 100%;
 }
@@ -69,6 +75,7 @@ nav {
   left: 0px;
   right: 0px;
   top: 0px;
+  z-index: 1;
 
   background: rgba(255, 255, 255, 0.01);
   border-bottom: 2px solid rgba(0, 0, 0, 0.05);
@@ -127,13 +134,13 @@ nav {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 9px;
-  border: 4px solid white;
+  border: 6px solid white;
   width: 0.5em;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(125, 96, 96, 0.3);
 }
