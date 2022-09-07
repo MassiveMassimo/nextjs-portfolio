@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react';
 import Loader from '../components/Loader'
 
 import styles from '../styles/Home.module.css'
 
+// let loading = false;
+
+
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   return (
     <div>
       <Head>
@@ -14,19 +19,25 @@ export default function Home() {
       </Head>
 
       <main>
-        <div style={{ height: '100vh', width: '100%', textAlign: 'center'}}>
+        <div style={{ height: '100vh', width: '100%', textAlign: 'center' }}>
           <div className={styles.heroHeadings}>
             <h3 className={styles.subheading}>Meet a next generation</h3>
             <h1 className={styles.heading}>Product Designer</h1>
           </div>
-          <iframe src='https://my.spline.design/portfoliohero-42c2c4614b0b42afdeb45b1d42f83c1f/' width='100%' height='100%' frameBorder='0'></iframe>
-          <div style={{ position: 'absolute', bottom: '0px', right: '0px', width: '48px', height: '48px', backgroundColor: '#FFFFFF' }}></div>
+          <iframe
+            id="spline"
+            src='https://my.spline.design/portfoliohero-42c2c4614b0b42afdeb45b1d42f83c1f/'
+            width='100%'
+            height='100%'
+            frameBorder='0'
+            onLoad={() => {
+              setLoading(false)
+              console.log('hero loaded')
+            }}
+          ></iframe>
         </div>
-        <div>
-          <Loader show />
-        </div>
+        <Loader show={loading} />
       </main>
     </div>
   );
 }
-

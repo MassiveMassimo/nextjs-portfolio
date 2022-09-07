@@ -6,7 +6,7 @@ export default function Navbar() {
             <ul className="left-nav-list fill-height">
                 <li className="fill-height center" style={{ width: '104px' }}>
                     <Link href="/">
-                        <a className="fill-height center">
+                        <a className="fill-height fill-width center">
                             <object className="click-through" data="/logo-light.svg" type="image/svg+xml" style={{ height: '36px', width: '100%', opacity: '80%' }}>navbar-logo</object>
                         </a>
                     </Link>

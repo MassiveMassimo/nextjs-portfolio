@@ -1,9 +1,16 @@
 export default function Loader({ show }: { show: boolean }) {
     return show ?
     <object style={{
-        height: '100%',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        height: '100vh',
         width: '100%',
-        margin: '0 auto',
+        backgroundColor: 'white',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 0,
     }}
         type="image/svg+xml" data="/logo-loader.svg">logo-loader
     </object> : null;
