@@ -9,25 +9,31 @@ export default function Responsive() {
         handle.addEventListener('mousedown', rightMouseDown);
     }
 
-    function rightMouseDown(e) {
+    function rightMouseDown(e: { preventDefault: () => void; }) {
         e.preventDefault();
         document.onmousemove = rightElementDrag;
         document.onmouseup = closeDragElement;
     }
 
-    function rightElementDrag(e) {
+    function rightElementDrag(e: MouseEvent) {
         e = e || window.event;
         e.preventDefault();
 
-        const width = e.clientX - container.offsetLeft;
+        let width = 0;
+        if (container != null) {
+            width = e.clientX - container.offsetLeft;
+        }
+
         const pwidth = typeof window !== 'undefined' ? document.getElementById('responsiveParent')?.offsetWidth : 0;
 
-        if (container != null && width >= 450 && width <= pwidth) {
-            container.style.width = `${width}px`;
+        if (pwidth != undefined) {
+            if (container != null && width >= 450 && width <= pwidth) {
+                container.style.width = `${width}px`;
 
-            console.log("pwidth: " + pwidth);
-            console.log("e.clientX: " + e.clientX);
-            console.log("width: " + width);
+                // console.log("pwidth: " + pwidth);
+                // console.log("e.clientX: " + e.clientX);
+                // console.log("width: " + width);
+            }
         }
     }
 
