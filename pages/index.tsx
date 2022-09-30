@@ -112,7 +112,7 @@ export default function Home() {
             </div>
             <p>A single pixel can be the difference between a great design and a perfect one. That’s why high-quality products rely on people who care about the most minute of details and can ensure you with the highest possible standards of design.</p>
           </motion.div>
-          <motion.div id="responsiveParent" style={{ display: "flex", width: "100%", backgroundColor: "#00000010", borderRadius: "1.25rem", alignItems: "center" }}
+          <motion.div id="responsiveParent" style={{ position: "relative", display: "flex", width: "100%", backgroundColor: "#00000010", borderRadius: "1.25rem", alignItems: "center" }}
             initial={{
               opacity: 0,
               y: 100,
@@ -131,7 +131,7 @@ export default function Home() {
 
             </motion.div> */}
             
-            {/* <Image src={rickroll} alt="" layout='fill' objectFit='contain'/> */}
+            <Image src={rickroll} alt="" layout='fill' objectFit='contain'/>
             <Responsive />
           </motion.div>
         </section>

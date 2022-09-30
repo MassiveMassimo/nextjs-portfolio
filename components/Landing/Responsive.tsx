@@ -27,8 +27,8 @@ export default function Responsive() {
         const pwidth = typeof window !== 'undefined' ? document.getElementById('responsiveParent')?.offsetWidth : 0;
 
         if (pwidth != undefined) {
-            if (container != null && width >= 450 && width <= pwidth) {
-                container.style.width = `${width}px`;
+            if (container != null && width >= 450 && width <= pwidth+64) {
+                container.style.width = `${width - 64}px`;
 
                 // console.log("pwidth: " + pwidth);
                 // console.log("e.clientX: " + e.clientX);
