@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Image from 'next/image';
+import rickroll from '/public/rickroll.gif';
 import Loader from '../components/Loader'
 import Counter from '../components/Landing/Counter/Counter';
 import Responsive from '../components/Landing/Responsive';
@@ -128,8 +130,8 @@ export default function Home() {
             }}>
 
             </motion.div> */}
-
-            <img style={{ position: "absolute", height: 120, left: 420, margin: "auto" }} src="https://d14eu5yur8w3te.cloudfront.net/api/v1/media/baseclub-media-uploads-production/92419bbc-3998-4c36-b2bd-5790254e6b70.gif" alt="" />
+            
+            {/* <Image src={rickroll} alt="" layout='fill' objectFit='contain'/> */}
             <Responsive />
           </motion.div>
         </section>
