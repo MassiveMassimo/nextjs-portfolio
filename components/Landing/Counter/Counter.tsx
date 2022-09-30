@@ -2,7 +2,7 @@ import { animate } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export default function Counter({ from, to }: { from: number; to: number }) {
-  const ref = useRef<HTMLInputElement>()
+  const ref = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>;
 
   useEffect(() => {
     const controls = animate(from, to, {
