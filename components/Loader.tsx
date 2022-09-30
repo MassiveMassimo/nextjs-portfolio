@@ -1,7 +1,7 @@
 export default function Loader({ show }: { show: boolean }) {
     return show ?
     <object style={{
-        position: 'absolute',
+        position: 'fixed',
         top: 0,
         left: 0,
         height: '100vh',

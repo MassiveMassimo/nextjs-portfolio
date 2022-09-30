@@ -16,12 +16,12 @@ export default function Navbar() {
                 </li>
                 <ul className="nav-items fill-height">
                     <li className="fill-height center">
-                        <Link href="/about">
+                        <Link href="/#about">
                             <a className="nav-item fill-height center">About me</a>
                         </Link>
                     </li>
                     <li className="fill-height center">
-                        <Link href="/about">
+                        <Link href="#projects">
                             <a className="nav-item fill-height center">Case studies</a>
                         </Link>
                     </li>
