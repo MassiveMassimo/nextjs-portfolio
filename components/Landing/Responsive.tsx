@@ -9,13 +9,13 @@ export default function Responsive() {
         handle.addEventListener('mousedown', rightMouseDown);
     }
 
-    function rightMouseDown({e} : any) {
+    function rightMouseDown(e) {
         e.preventDefault();
         document.onmousemove = rightElementDrag;
         document.onmouseup = closeDragElement;
     }
 
-    function rightElementDrag({e} : any) {
+    function rightElementDrag(e) {
         e = e || window.event;
         e.preventDefault();
 
