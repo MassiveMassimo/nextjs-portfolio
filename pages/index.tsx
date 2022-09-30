@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image';
 import rickroll from '/public/rickroll.gif';
 import Loader from '../components/Loader'
-import Counter from '../components/Landing/Counter/Counter';
+import Counter from '../components/Landing/Counter';
 import Responsive from '../components/Landing/Responsive';
 import { useRef, useState } from 'react';
 
@@ -131,7 +131,7 @@ export default function Home() {
 
             </motion.div> */}
             
-            <Image src={rickroll} alt="" layout='fill' objectFit='contain'/>
+            <Image src={rickroll} alt="" layout='fill' objectFit='contain' style={{ opacity: "10%" }}/>
             <Responsive />
           </motion.div>
         </section>

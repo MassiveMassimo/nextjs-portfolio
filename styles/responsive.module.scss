@@ -1,0 +1,59 @@
+.parent {
+    container-type: inline-size;
+}
+
+.cardRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 0px 0px;
+    gap: 20px;
+
+    width: 100%;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.card {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 32px;
+    gap: 10px;
+
+    width: 100%;
+    height: 165px;
+
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+    // border: 4px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+
+    /* Inside auto layout */
+
+    flex: 1;
+    order: 0;
+    flex-grow: 1;
+}
+
+@container (max-width: 700px) {
+    .cardRow {
+        flex-direction: column;
+    }
+
+    .header {
+        font-size: 2em;
+    }
+
+    .body {
+        font-size: 1em;
+    }
+    
+}

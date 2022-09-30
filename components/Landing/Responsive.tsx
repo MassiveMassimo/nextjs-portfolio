@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import styles from "../../styles/responsive.module.scss";
 
 export default function Responsive() {
 
@@ -54,11 +54,16 @@ export default function Responsive() {
                     </svg>
                 </div>
             </div>
-            <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", gap: "1.25rem", paddingRight: "2.5rem" }}>
+            <div className={styles.parent} style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", gap: "1.25rem", paddingRight: "2.5rem" }}>
                 <div style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}>
-                    <h2>Designing for Everything and Everyone</h2>
+                    <h2 className={styles.header}>Designing for Everything and Everyone</h2>
                 </div>
-                <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+                <p className={styles.body}>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+                <div className={styles.cardRow}>
+                    <div className={styles.card}></div>
+                    <div className={styles.card}></div>
+                    <div className={styles.card}></div>
+                </div>
             </div>
         </div>
     )
