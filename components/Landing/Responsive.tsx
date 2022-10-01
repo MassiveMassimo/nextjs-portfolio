@@ -2,7 +2,7 @@ import styles from "../../styles/responsive.module.scss";
 
 export default function Responsive() {
 
-    const container = typeof window !== 'undefined' ? document.getElementById('resizeable') : null;
+    const container = typeof window !== 'undefined' ? document.getElementById('responsive') : null;
     const handle = typeof window !== 'undefined' ? document.getElementById('handle') : null;
 
     if (handle) {
@@ -45,7 +45,7 @@ export default function Responsive() {
     }
 
     return (
-        <div id="resizeable" style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "#FFFFFF" }}>
+        <div id="responsive" style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "#FFFFFF" }}>
             <div id="handle" style={{ display: "flex", position: "absolute", width: "0.5rem", height: "100%", borderRadius: "0.25rem", top: 0, right: 0, alignItems: "center", backgroundColor: "#8A8A8A", cursor: "col-resize" }}>
                 <div style={{ display: "flex", position: "absolute", left: "-0.75rem", width: "2rem", height: "2rem", borderRadius: "1rem", backgroundColor: "#ccc", alignItems: "center" }}>
                     <svg style={{ margin: "auto" }} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@ export default function Responsive() {
                     </svg>
                 </div>
             </div>
-            <div className={styles.parent} style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", gap: "1.25rem", paddingRight: "2.5rem" }}>
+            <div className={styles.bodyParent}>
                 <div style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}>
                     <h2 className={styles.header}>Designing for Everything and Everyone</h2>
                 </div>

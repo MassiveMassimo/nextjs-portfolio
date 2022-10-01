@@ -16,8 +16,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   let from = 0;
   let to = 80;
-  
-  
+
+
   // prevent page from scrolling
   if (typeof window !== 'undefined') {
     if (loading) {
@@ -88,7 +88,7 @@ export default function Home() {
             </div>
             <p>With an actual lifetime guarantee, you can expect non-stop updates to forever improve your Imo experience.</p>
           </motion.div>
-          <motion.div style={{ position: "relative", padding: "2rem 0", width: "100%", display: "flex", flexDirection: "column", gap: "1.25rem" }}
+          <motion.div style={{ position: "relative", padding: "2rem 0", width: "100%", display: "flex", flexDirection: "column", gap: "1.25rem", cursor: "grab" }}
             initial={{
               opacity: 0,
               y: 100,
@@ -103,10 +103,13 @@ export default function Home() {
             drag
             dragConstraints={{
               top: -10,
-              left: -10,
-              right: 10,
+              left: -30,
+              right: 30,
               bottom: 10,
-            }}>
+            }}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+            dragElastic={0.5}
+            whileTap={{ cursor: "grabbing" }}>
             <div style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}>
               <h2>A True Pixel Perfectionist</h2>
             </div>
@@ -130,8 +133,8 @@ export default function Home() {
             }}>
 
             </motion.div> */}
-            
-            <Image src={rickroll} alt="" layout='fill' objectFit='contain' style={{ opacity: "10%" }}/>
+
+            <Image src={rickroll} alt="" layout='fill' objectFit='contain' />
             <Responsive />
           </motion.div>
         </section>
