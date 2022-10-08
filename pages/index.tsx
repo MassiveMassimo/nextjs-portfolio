@@ -125,7 +125,7 @@ export default function Home() {
               <span className={styles.amen}>(AMEN)</span>
             </div>
             <p>
-              Hi I'm Imo! With an actual lifetime guarantee, you can expect
+              Hi I&apos;m Imo! With an actual lifetime guarantee, you can expect
               non-stop updates to forever improve your Imo experience.
             </p>
           </motion.div>
@@ -237,7 +237,7 @@ export default function Home() {
               <h2>Tested and Benchmarked</h2>
             </div>
             <p>
-              Sometimes, a fancy website isn't enough to fully illustrate the
+              Sometimes, a fancy website isn&apos;t enough to fully illustrate the
               capabilities of a designer. Sometimes, you need hard numbers. To
               guarantee industry levels of quality, thorough and comprehensive
               testing was conducted through numerous reputable benchmarks to
