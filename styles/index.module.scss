@@ -4,8 +4,6 @@
   text-align: center;
 }
 
-
-
 .heroHeadings {
   position: absolute;
   top: 45%;
@@ -40,18 +38,21 @@
   padding: 12px 20px;
   gap: 8px;
 
-  background: linear-gradient(90deg, rgba(0, 210, 255, 0.2) 0%, rgba(58, 123, 213, 0.2) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 210, 255, 0.2) 0%,
+    rgba(58, 123, 213, 0.2) 100%
+  );
   border-radius: 12px;
 
   font-weight: 600;
   font-size: 18px;
 
-  color: #00D2FF;
-
+  color: #00d2ff;
 }
 
 .amen {
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-weight: 700;
   opacity: 40%;
 
@@ -61,18 +62,4 @@
   position: absolute;
   top: 1.75rem;
   left: 10.5rem;
-
 }
-
-.handle {
-  position: absolute;
-  width: 10px;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background-color: pink;
-  cursor: col-resize;
-}
-
-
-
