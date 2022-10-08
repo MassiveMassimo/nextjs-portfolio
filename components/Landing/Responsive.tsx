@@ -114,6 +114,7 @@ export default function Responsive() {
             >
               <Image
                 src="/mobile.png"
+                placeholder="blur"
                 alt=""
                 layout="responsive"
                 width="100%"
@@ -129,6 +130,7 @@ export default function Responsive() {
             >
               <Image
                 src="/tablet.png"
+                placeholder="blur"
                 alt=""
                 layout="responsive"
                 width="100%"
@@ -144,6 +146,7 @@ export default function Responsive() {
             >
               <Image
                 src="/desktop.png"
+                placeholder="blur"
                 alt=""
                 layout="responsive"
                 width="100%"
