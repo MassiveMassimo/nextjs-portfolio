@@ -103,7 +103,7 @@ export default function Responsive() {
         </div>
         <p className={styles.body}>
           From massive monitors to minuscule mobiles, every good design should
-          be accessible to everyone. That's why accessibility and usability are
+          be accessible to everyone. That&apos;s why accessibility and usability are
           the keys to a perfect design and in turn, designer.
         </p>
         <div className={styles.cardRow}>
