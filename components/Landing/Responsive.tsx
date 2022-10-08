@@ -36,6 +36,8 @@ export default function Responsive() {
     if (parentWidth != undefined) {
       if (container != null && width >= 450 && width <= parentWidth + 64) {
         container.style.width = `${width - 72}px`;
+        // hide cursor
+        container.style.cursor = "none";
 
         // console.log("parentWidth: " + parentWidth);
         // console.log("e.clientX: " + e.clientX);
@@ -103,8 +105,8 @@ export default function Responsive() {
         </div>
         <p className={styles.body}>
           From massive monitors to minuscule mobiles, every good design should
-          be accessible to everyone. That&apos;s why accessibility and usability are
-          the keys to a perfect design and in turn, designer.
+          be accessible to everyone. That&apos;s why accessibility and usability
+          are the keys to a perfect design and in turn, designer.
         </p>
         <div className={styles.cardRow}>
           <div className={[styles.card, styles.mobile].join(" ")}>
@@ -115,6 +117,7 @@ export default function Responsive() {
               <Image
                 src="/mobile.png"
                 placeholder="blur"
+                blurDataURL="/mobile-blur.png"
                 alt=""
                 layout="responsive"
                 width="100%"
@@ -131,6 +134,7 @@ export default function Responsive() {
               <Image
                 src="/tablet.png"
                 placeholder="blur"
+                blurDataURL="/tablet-blur.png"
                 alt=""
                 layout="responsive"
                 width="100%"
@@ -147,6 +151,7 @@ export default function Responsive() {
               <Image
                 src="/desktop.png"
                 placeholder="blur"
+                blurDataURL="/desktop-blur.png"
                 alt=""
                 layout="responsive"
                 width="100%"
