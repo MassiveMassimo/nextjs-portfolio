@@ -132,8 +132,8 @@ export default function PixelPerfect() {
                 y2="11.4341"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#00D2FF" />
-                <stop offset="1" stop-color="#3A7BD5" />
+                <stop stopColor="#00D2FF" />
+                <stop offset="1" stopColor="#3A7BD5" />
               </linearGradient>
             </defs>
           </motion.svg>
