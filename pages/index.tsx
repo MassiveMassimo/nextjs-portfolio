@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Loader from "../components/Loader";
 import Counter from "../components/Landing/Counter";
+import PixelPerfect from "../components/Landing/PixelPerfect";
 import Responsive from "../components/Landing/Responsive";
 
 import { useRef, useState } from "react";
@@ -99,7 +100,7 @@ export default function Home() {
             }}
             initial={{
               opacity: 0,
-              y: 100,
+              y: 200,
             }}
             whileInView={{
               opacity: 1,
@@ -129,6 +130,11 @@ export default function Home() {
               non-stop updates to forever improve your Imo experience.
             </p>
           </motion.div>
+          
+          <PixelPerfect />
+          
+          <Responsive />
+          
           <motion.div
             style={{
               position: "relative",
@@ -137,98 +143,17 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               gap: "1.25rem",
-              cursor: "grab",
             }}
             initial={{
               opacity: 0,
-              y: 100,
+              y: 200,
             }}
             whileInView={{
               opacity: 1,
               y: 0,
             }}
             transition={{
-              delay: 0.2,
-            }}
-            drag
-            dragConstraints={{
-              top: -10,
-              left: -30,
-              right: 30,
-              bottom: 10,
-            }}
-            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-            dragElastic={0.5}
-            whileTap={{ cursor: "grabbing" }}
-          >
-            <div
-              style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}
-            >
-              <h2>A True Pixel Perfectionist</h2>
-            </div>
-            <p>
-              A single pixel can be the difference between a great design and a
-              perfect one. That’s why high-quality products rely on people who
-              care about the most minute of details and can ensure you with the
-              highest possible standards of design.
-            </p>
-          </motion.div>
-          <motion.div
-            id="responsiveParent"
-            style={{
-              position: "relative",
-              display: "flex",
-              width: "100%",
-              backgroundColor: "#00000010",
-              borderRadius: "1.25rem",
-            }}
-            initial={{
-              opacity: 0,
-              y: 100,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              delay: 0.25,
-            }}
-          >
-            {/* <motion.div id="handle" className={styles.handle}
-            drag
-            dragConstraints={{
-            }}>
-
-            </motion.div> */}
-
-            <Image
-              src="/rickroll.gif"
-              alt=""
-              layout="fill"
-              objectFit="contain"
-            />
-            <Responsive />
-          </motion.div>
-          <motion.div
-            style={{
-              position: "relative",
-              padding: "2rem 0",
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.25rem",
-              cursor: "grab",
-            }}
-            initial={{
-              opacity: 0,
-              y: 100,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              delay: 0.2,
+              delay: 0.3,
             }}
           >
             <div
@@ -237,11 +162,43 @@ export default function Home() {
               <h2>Tested and Benchmarked</h2>
             </div>
             <p>
-              Sometimes, a fancy website isn&apos;t enough to fully illustrate the
-              capabilities of a designer. Sometimes, you need hard numbers. To
-              guarantee industry levels of quality, thorough and comprehensive
-              testing was conducted through numerous reputable benchmarks to
-              ensure top notch design.
+              Sometimes, a fancy website isn&apos;t enough to fully illustrate
+              the capabilities of a designer. Sometimes, you need hard numbers.
+              To guarantee industry levels of quality, thorough and
+              comprehensive testing was conducted through numerous reputable
+              benchmarks to ensure top notch design.
+            </p>
+          </motion.div>
+          <motion.div
+            style={{
+              position: "relative",
+              padding: "2rem 0",
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              gap: "1.25rem",
+            }}
+            initial={{
+              opacity: 0,
+              y: 200,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.3,
+            }}
+          >
+            <div
+              style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}
+            >
+              <h2>Developer-Friendly</h2>
+            </div>
+            <p>
+              Don&apos;t worry developers, I won&apos;t bite. Having experience
+              in frontend myself, I know how to effectively design meaningful
+              user experiences without breaking developers&apos; backs.
             </p>
           </motion.div>
         </section>

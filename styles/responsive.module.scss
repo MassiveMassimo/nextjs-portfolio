@@ -1,146 +1,155 @@
 .bodyParent {
-    width: 100%;
-    height: 100%;
-    padding-right: 2.5rem;
+  width: 100%;
+  height: 100%;
+  padding-right: 2.5rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 
-    container-type: inline-size;
+  container-type: inline-size;
 }
 
 .cardRow {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 20px 0px 0px;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 0px 0px;
+  gap: 20px;
 
-    width: 100%;
+  width: 100%;
 
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 .card {
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 
-    /* Auto layout */
+  /* Auto layout */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 2.5rem;
-    padding-top: 1.5rem;
-    gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2.5rem;
+  padding-top: 1.5rem;
+  gap: 1.25rem;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
+  // border: 4px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
 
-    // border: 4px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+  /* Inside auto layout */
 
-    /* Inside auto layout */
-
-    flex: 1;
-    order: 0;
-    flex-grow: 1;
+  flex: 1;
+  order: 0;
+  flex-grow: 1;
 }
 
 .handle {
-    display: flex;
-    position: absolute;
-    width: 0.5rem;
-    height: 100%;
-    border-radius: 0.25rem;
-    top: 0;
-    right: -0.5rem;
-    align-items: center;
-    background-color: #8A8A8A;
-    cursor: grab;
-  }
-  
-  .handle:active {
-    cursor: grabbing;
-  }
-  
+  display: flex;
+  position: absolute;
+  width: 0.5rem;
+  height: 100%;
+  border-radius: 0.25rem;
+  top: 0;
+  right: -0.5rem;
+  align-items: center;
+  background-color: #8a8a8a;
+  cursor: pointer;
+}
+
+.handle:active {
+  cursor: pointer;
+}
 
 @container (min-width: 60vw) {
+  .cardRow {
+    height: 50vh;
+  }
 
-    .cardRow {
-        height: 50vh;
-    }
+  .desktop {
+    background: #da22ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to top,
+      #9733ee,
+      #da22ff
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to top,
+      #9733ee,
+      #da22ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 
-    .desktop {
-        background: #DA22FF;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-           
-    }
-
-    .mobile,
-    .tablet {
-        background: #00000010;
-    }
+  .mobile,
+  .tablet {
+    background: #00000010;
+  }
 }
 
 @container (max-width: 60vw) {
-    .cardRow {
-        flex-direction: column;
-        height: 150vh
-    }
+  .cardRow {
+    flex-direction: column;
+    height: 150vh;
+  }
 
-    .header {
-        font-size: 2.5em;
-    }
+  .header {
+    font-size: 2.5em;
+  }
 
-    .body {
-        font-size: 1em;
-    }
+  .body {
+    font-size: 1em;
+  }
 
-    .tablet {
-        background: #FF512F;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
-    }
+  .tablet {
+    background: #ff512f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to top,
+      #dd2476,
+      #ff512f
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to top,
+      #dd2476,
+      #ff512f
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 
-    .mobile,
-    .desktop {
-        background: #00000010;
-    }
+  .mobile,
+  .desktop {
+    background: #00000010;
+  }
 }
 
-
 @container (max-width: 40vw) {
-    .cardRow {
-        flex-direction: column;
-        height: 120vh;
-    }
+  .cardRow {
+    flex-direction: column;
+    height: 150vh;
+  }
 
-    .header {
-        font-size: 2em;
-    }
+  .header {
+    font-size: 2em;
+  }
 
-    .body {
-        font-size: 0.85em;
-    }
+  .body {
+    font-size: 0.85em;
+  }
 
-    .mobile {
-        background: #12c2e9;
-        background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-        background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-    }
+  .mobile {
+    background: #12c2e9;
+    background: -webkit-linear-gradient(to top, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to top, #f64f59, #c471ed, #12c2e9);
+  }
 
-    .tablet,
-    .desktop {
-        background: #00000010;
-    }
-
+  .tablet,
+  .desktop {
+    background: #00000010;
+  }
 }

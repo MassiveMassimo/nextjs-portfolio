@@ -10,7 +10,7 @@ export default function Loader({ show }: { show: boolean }) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        zIndex: 0,
+        zIndex: 3,
     }}
         type="image/svg+xml" data="/logo-loader.svg">logo-loader
     </object> : null;
