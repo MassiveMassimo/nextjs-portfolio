@@ -78,7 +78,9 @@ export default function PixelPerfect() {
             }
           }
         }}
-        onDragEnd={() => {
+        onDragEnd={(event, info) => {
+
+          console.log(info.point.x, info.point.y);
           if (element) {
             const style = window.getComputedStyle(element);
             const matrix = new WebKitCSSMatrix(style.transform);
@@ -86,9 +88,9 @@ export default function PixelPerfect() {
             const deltaX = matrix.m41;
             const deltaY = matrix.m42;
 
-            element.style.transform = `translate(${Math.round(
+            element.style.transform = `translate(${Math.floor(
               deltaX
-            )}px, ${Math.round(deltaY)}px)`;
+            )}px, ${Math.floor(deltaY)}px)`;
 
             if (getDeltaOrigin() == 0) {
               element.style.transform = "none";
