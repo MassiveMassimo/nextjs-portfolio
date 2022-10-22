@@ -35,7 +35,7 @@ export default function PixelPerfect() {
       deltaX = matrix.m41;
       deltaY = matrix.m42;
     }
-    return Math.floor(Math.pow(Math.pow(deltaX, 2) + Math.pow(deltaY, 2), 0.5));
+    return Math.round(Math.pow(Math.pow(deltaX, 2) + Math.pow(deltaY, 2), 0.5));
   };
 
   return (
@@ -48,8 +48,8 @@ export default function PixelPerfect() {
         }}
         whileInView={{
           opacity: 1,
-          x: Math.floor(Math.random() * 60) - 30,
-          y: Math.floor(Math.random() * 40) - 20,
+          x: Math.round(Math.random() * 60) - 30,
+          y: Math.round(Math.random() * 40) - 20,
         }}
         transition={{
           delay: 0.2,
