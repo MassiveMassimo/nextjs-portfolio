@@ -1,5 +1,6 @@
 import styles from "../../styles/pixelPerfect.module.scss";
 import { motion, useAnimationControls } from "framer-motion";
+import confetti from "canvas-confetti";
 
 const pathVariants = {
   hidden: {
@@ -61,8 +62,6 @@ export default function PixelPerfect() {
           bottom: 20,
         }}
         dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-        dragElastic={0.5}
-        dragMomentum={false}
         onDrag={() => {
           if (element) {
             element.style.animationDuration = `${
@@ -79,23 +78,28 @@ export default function PixelPerfect() {
           }
         }}
         onDragEnd={(event, info) => {
-
-          console.log(info.point.x, info.point.y);
           if (element) {
-            const style = window.getComputedStyle(element);
-            const matrix = new WebKitCSSMatrix(style.transform);
-
-            const deltaX = matrix.m41;
-            const deltaY = matrix.m42;
-
-            element.style.transform = `translate(${Math.floor(
-              deltaX
-            )}px, ${Math.floor(deltaY)}px)`;
 
             if (getDeltaOrigin() == 0) {
-              element.style.transform = "none";
+              
+              setTimeout(() => {
+                element.style.transform = "none";
+              }, 300);
               element.style.backgroundImage = `none`;
               controls.start("visible");
+
+              confetti({
+                particleCount: 200,
+                angle: 60,
+                spread: 60,
+                origin: { x: 0, y: 1 },
+              });
+              confetti({
+                particleCount: 200,
+                angle: 120,
+                spread: 60,
+                origin: { x: 1, y: 1 },
+              });
             } else {
               element.style.backgroundImage = `linear-gradient(90deg, silver 50%, transparent 50%),
               linear-gradient(90deg, silver 50%, transparent 50%),
