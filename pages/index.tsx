@@ -4,6 +4,7 @@ import Loader from "../components/Loader";
 import Counter from "../components/Landing/Counter";
 import PixelPerfect from "../components/Landing/PixelPerfect";
 import Responsive from "../components/Landing/Responsive";
+import Editor from "../components/Landing/Editor";
 
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -169,38 +170,7 @@ export default function Home() {
               benchmarks to ensure top notch design.
             </p>
           </motion.div>
-          <motion.div
-            style={{
-              position: "relative",
-              padding: "2rem 0",
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.25rem",
-            }}
-            initial={{
-              opacity: 0,
-              y: 200,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              delay: 0.3,
-            }}
-          >
-            <div
-              style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}
-            >
-              <h2>Developer-Friendly</h2>
-            </div>
-            <p>
-              Don&apos;t worry developers, I won&apos;t bite. Having experience
-              in frontend myself, I know how to effectively design meaningful
-              user experiences without breaking developers&apos; backs.
-            </p>
-          </motion.div>
+          <Editor />
         </section>
         <section></section>
       </main>

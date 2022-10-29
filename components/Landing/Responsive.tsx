@@ -1,4 +1,4 @@
-import styles from "../../styles/responsive.module.scss";
+import styles from "../../styles/landing/responsive.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -154,6 +154,7 @@ export default function Responsive() {
                   objectFit="contain"
                 />
               </div>
+              <span id={styles.mobileBg}/>
             </div>
             <div className={[styles.card, styles.tablet].join(" ")}>
               <b>Tablet</b>
@@ -171,6 +172,7 @@ export default function Responsive() {
                   objectFit="contain"
                 />
               </div>
+              <span id={styles.tabletBg}/>
             </div>
             <div className={[styles.card, styles.desktop].join(" ")}>
               <b>Desktop</b>
@@ -188,6 +190,7 @@ export default function Responsive() {
                   objectFit="contain"
                 />
               </div>
+              <span id={styles.desktopBg}/>
             </div>
           </div>
         </div>

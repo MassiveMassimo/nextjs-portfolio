@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.form > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.textarea {
+    resize: none;
+
+    height: 40vh;
+}
+
+.editor {
+    font-size: 1.25rem;
+}
