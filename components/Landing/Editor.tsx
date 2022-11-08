@@ -37,7 +37,9 @@ export default function Editor() {
   const onChangeHTML = React.useCallback((value: string) => {
 
     const newWrapper = `<div jsx id="wrapper">\n` + value + `\n</div>`;
+    console.log(value);
     const wrapper = document.getElementById("wrapper");
+    console.log(wrapper);
     if (wrapper) {
       wrapper.innerHTML = newWrapper;
     }

@@ -3,13 +3,11 @@
 <rect x="72" y="8" width="112" height="128" rx="32" stroke="black" stroke-width="16"/>
 <circle cx="248" cy="72" r="64" stroke="black" stroke-width="16"/>
 <style>
-    @media (prefers-color-scheme: dark) {
-      rect {
-        stroke: white;
-      }
-      circle {
-        stroke: white;
-      }
-    }
-  </style>
+  @media (prefers-color-scheme: light) {
+    rect, circle { stroke: black; }
+  }
+  @media (prefers-color-scheme: dark) {
+    rect, circle { stroke: white; }
+  }
+</style>
 </svg>
